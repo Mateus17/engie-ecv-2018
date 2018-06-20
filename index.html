@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700|Open+Sans:400,600,700|Ovo" rel="stylesheet">
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Comparateur de voiture électrique | Engie</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <video class="video-header" src="./voiture.mp4" autoplay loop></video>
+    <div class="container">
+      <nav class="navbar navbar-dark">
+        <span class="navbar-brand mb-0 h1">engie</span>
+      </nav>
+      <div class="col-8 offset-2 d-flex flex-column justify-content-center heading">
+        <p class="intro text-center">Vous ne savez pas quelle voiture électrique choisir&nbsp;?</p>
+
+        <h1 class="text-center">Avec le premier comparateur d'engie trouver la voiture électrique qui vous correspond le mieux</h1>
+
+        <form id="compare-1" class="d-flex justify-content-between" action="" method="POST">
+          <select name="marque-1" id="marque-1">
+            <option value="hide">Marque</option>
+            <option value="renault">Renault</option>
+            <option value="nissan">Nissan</option>
+            <option value="bmw">BMW</option>
+            <option value="tesla">Tesla</option>
+            <option value="volkswagen">Volkswagen</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="kia">Kia</option>
+            <option value="citroen">Citroën</option>
+            <option value="peugeot">Peugeot</option>
+            <option value="smart">Smart</option>
+          </select>
+          <select name="modele-1" id="modele-1" disabled>
+            <option value="hide">Modèle</option>
+            <option value="zoe">Zoé</option>
+            <option value="fluence">Fluence ZE</option>
+            <option value="kangoo">Kangoo électrique</option>
+            <option value="master">Master ZE</option>
+            <option value="twizy">Twizy</option>
+            <option value="twizy_cargo">Twizy Cargo</option>
+            <option value="twingo">Twingo électrique</option>
+          </select>
+          <select name="type-1" id="type-1" disabled>
+            <option value="hide">Version</option>
+            <option value="life">Life</option>
+            <option value="life_cr">Life charge rapide</option>
+            <option value="zen">Zen</option>
+            <option value="zen_cr">Zen charge rapide</option>
+            <option value="intens">Intens</option>
+            <option value="intens_cr">Intens charge rapide</option>
+            <option value="edition_one">« Edition One »</option>
+            <option value="edition_one_cr">« Edition One » charge rapide</option>
+          </select>
+        </form>
+
+        <p class="versus text-center">VS</p>
+
+        <form id="compare-2" class="d-flex justify-content-between" action="" method="POST">
+          <select name="marque-2" id="marque-2">
+            <option value="hide">Marque</option>
+            <option value="renault">Renault</option>
+            <option value="nissan">Nissan</option>
+            <option value="bmw">BMW</option>
+            <option value="tesla">Tesla</option>
+            <option value="volkswagen">Volkswagen</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="kia">Kia</option>
+            <option value="citroen">Citroën</option>
+            <option value="peugeot">Peugeot</option>
+            <option value="smart">Smart</option>
+          </select>
+          <select name="modele-2" id="modele-2" disabled>
+            <option value="hide">Modèle</option>
+            <option value="leaf_nouveau">Leaf (nouveau)</option>
+            <option value="leaf">Leaf</option>
+            <option value="imx">IMx</option>
+            <option value="e_nv200">e-NV200</option>
+            <option value="e_nv200_evalia">e-NV200 Evalia</option>
+          </select>
+          <select name="type-2" id="type-2" disabled>
+            <option value="hide">Version</option>
+            <option value="acenta">Acenta</option>
+            <option value="n_connecta">N-Connecta</option>
+            <option value="tekna">Tekna</option>
+          </select>
+        </form>
+
+        <button class="button-versus">Comparer</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="container">
+      <div class="versus-container d-flex justify-content-between">
+        <div class="vs vs-1">
+          <h2>Renault Zoé Life</h2>
+          <img class="img-vehicule" src="./img/zoe.jpg" alt="">
+          <div class="descriptions">
+            <div class="item d-flex justify-content-between">
+              <div class="col-left">Prix</div>
+              <div class="col-right">À partir de 19 750 €</div>
+            </div>
+            <div class="item d-flex justify-content-between">
+              <div class="col-left">Autonomie électrique</div>
+              <div class="col-right">400 km</div>
+            </div>
+            <div class="item d-flex justify-content-between">
+              <div class="col-left">Capacité batterie</div>
+              <div class="col-right">41 kWh</div>
+            </div>
+            <div class="item d-flex justify-content-between">
+              <div class="col-left">Puissance de recharge max.</div>
+              <div class="col-right">43 kW</div>
+            </div>
+            <div class="item d-flex justify-content-between">
+              <div class="col-left">Prises</div>
+              <div class="col-right">Type 2</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vs vs-2">
+          <h2>Nissan Leaf</h2>
+          <img src="./img/zoe.jpg" alt="">
+          <div class="descriptions">
+            <div class="item d-flex justify-content-between">
+              <div class="col-left">Prix</div>
+              <div class="col-right">À partir de 30 990 €</div>
+            </div>
+            <div class="item d-flex justify-content-between">
+              <div class="col-left">Autonomie électrique</div>
+              <div class="col-right">378 km</div>
+            </div>
+            <div class="item d-flex justify-content-between">
+              <div class="col-left">Capacité batterie</div>
+              <div class="col-right">40 kWh</div>
+            </div>
+            <div class="item d-flex justify-content-between">
+              <div class="col-left">Puissance de recharge max.</div>
+              <div class="col-right">50 kW</div>
+            </div>
+            <div class="item d-flex justify-content-between">
+              <div class="col-left">Prises</div>
+              <div class="col-right">Type 2 CHAdeMO</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="versus-see-more text-center">voir plus</p>
+    </section>
+  </main>
+
+  <section class="details">
+    <div class="container text-center">
+      <h1 class="col-8 offset-2">Découvrez tous les avantages de passer à l'électrique avec l'offre d'engie elec car</h1>
+
+      <div class="d-flex justify-content-between offers">
+        <div class="offer">
+          <img src="./offer-1.png" alt="">
+          <h2 class="offer-title">Des économies sinificative</h2>
+          <p class="offer-detail">L'offre Elec'Car c'est un prix du kWh réduit de 50% par rapport aux heures pleines de l'offre Elec'Car.</p>
+        </div>
+        <div class="offer">
+          <img src="./offer-2.png" alt="">
+          <h2 class="offer-title">Une électricité totalement verte</h2>
+          <p class="offer-detail">Sachez que choisir une offre d’électricité d’ENGIE, c’est opter pour une électricité d’origine hydraulique, éolienne
+            et solaire, certifiée par des Garanties d’Origine.</p>
+        </div>
+        <div class="offer">
+          <img src="./offer-3.png" alt="">
+          <h2 class="offer-title">Zéro engagement de durée</h2>
+          <p class="offer-detail">Possibilité de résilier votre contrat à tout moment et sans frais.</p>
+        </div>
+      </div>
+
+      <button class="button-versus button-versus-reverse">Découvrir l'offre</button>
+    </div>
+  </section>
+
+  <footer class="container">
+    <nav class="navbar">
+      <span class="navbar-brand mb-0 h1">engie</span>
+    </nav>
+    <div class="d-flex justify-content-between">
+      <p class="address">
+        Service Clients
+        <br> TSA 87 494
+        <br> 76934 ROUEN CEDEX 09
+      </p>
+      <div class="list-menu-footer d-flex">
+        <ul>
+          <li>
+            <a href="#">Airflow</a>
+          </li>
+          <li>
+            <a href="#">Bornes disponibles</a>
+          </li>
+          <li>
+            <a href="#">Voitures eléctriques</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Professionnels</a>
+          </li>
+          <li>
+            <a href="#">Entreprises et Collectivités</a>
+          </li>
+          <li>
+            <a href="#">engie.com</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Presse</a>
+          </li>
+          <li>
+            <a href="#">Numéros d'urgence</a>
+          </li>
+          <li>
+            <a href="#">Plan du site</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Lexique A à Z</a>
+          </li>
+          <li>
+            <a href="#">CGV</a>
+          </li>
+          <li>
+            <a href="#">Mentions légales</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <p class="outro">Engie, société anonyme au capital de 2 435 285 011 euros, immatriculée au Registre du Commerce et des Sociétés de Nanterre,
+        sous le numéro 542 107 651 dont le siège est situé 1, place Samuel de Champlain 92400 Courbevoie - France</p>
+
+      <ul class="d-flex social-links">
+        <li>
+          <a href="#" class="icon facebook-icon">a</a>
+        </li>
+        <li>
+          <a href="#" class="icon twitter-icon">b</a>
+        </li>
+        <li>
+          <a href="#" class="icon instagram-icon">c</a>
+        </li>
+        <li>
+          <a href="#" class="icon youtube-icon">d</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./jquery-3.3.1.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

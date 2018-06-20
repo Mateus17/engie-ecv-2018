@@ -1,0 +1,355 @@
+@font-face {
+  font-family: "Calibre Light";
+  src: url("Calibre-Light.woff2") format("woff2"),
+    url("Calibre-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+$black: #000000;
+$white: #ffffff;
+$select-color: #404040;
+$h2-color: #434343;
+$engie: #00aaff;
+$bg-blue: #5ba0f0;
+$border-item: #979797;
+
+$openSans: "Open Sans", sans-serif;
+$firaSans: "Fira Sans", sans-serif;
+$calibreLight: "Calibre Light", sans-serif;
+$ovo: "Ovo", serif;
+
+.main-header {
+  background: $black;
+  height: 587px;
+  position: relative;
+}
+
+#main-content {
+  background: $white;
+}
+
+.heading {
+  height: calc(587px - 56px);
+}
+
+.video-header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 99%;
+  width: auto;
+}
+
+.intro {
+  font-family: $openSans;
+  font-size: 1.125em;
+  line-height: 1.33;
+  color: $white;
+  margin-bottom: 0.666em;
+}
+
+h1 {
+  font-family: $ovo;
+  font-size: 1.875em;
+  line-height: 1.1;
+  color: $white;
+  margin-bottom: 2.666em;
+}
+
+h2 {
+  font-family: $openSans;
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 1.35;
+  color: $h2-color;
+  margin-top: 2.15em;
+  margin-bottom: 1.1em;
+}
+
+.img-vehicule {
+  margin-bottom: 1.4375em;
+}
+
+.vs {
+  width: 380px;
+}
+
+.item {
+  position: relative;
+  font-size: 1em;
+  line-height: 1.375;
+  padding: 0.625em 0;
+  margin: 0;
+  font-family: $openSans;
+  .col-right {
+    font-weight: 700;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: $border-item;
+    opacity: 0.5;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+.versus {
+  font-family: $firaSans;
+  font-weight: 700;
+  font-size: 1.6875em;
+  line-height: 1.4;
+  color: $white;
+  letter-spacing: -0.003em;
+  position: relative;
+  margin: 0.11em 0;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $white;
+    width: 45%;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+}
+
+.versus-container {
+  max-width: 940px;
+  margin: auto;
+}
+
+.versus-see-more {
+  font-family: $openSans;
+  font-size: 0.8125em;
+  line-height: 1.38;
+  color: $select-color;
+  letter-spacing: -0.003em;
+  position: relative;
+  margin: 3.84em auto;
+  max-width: 940px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $border-item;
+    width: 45%;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+}
+
+.button-versus {
+  font-family: $openSans;
+  font-weight: 700;
+  font-size: 1em;
+  color: $white;
+  letter-spacing: -0.035em;
+  background-color: $engie;
+  border: none;
+  margin: 1.875em auto 0;
+  padding: 0.46em 4em;
+  border-radius: 100px;
+  &.button-versus-reverse {
+    background-color: $white;
+    color: $engie;
+  }
+}
+
+.details {
+  background: $bg-blue;
+  padding: 3.4375em 0 4.0625em;
+}
+
+.offers {
+  max-width: 940px;
+  margin: auto;
+}
+
+.offer {
+  width: 287px;
+  transition: all 0.5s ease;
+  h2 {
+    font-family: $ovo;
+    color: $white;
+    font-size: 1.5625em;
+    line-height: 1.16;
+  }
+  .offer-detail {
+    font-family: $openSans;
+    color: $white;
+    font-size: 0.875em;
+    line-height: 1.35;
+  }
+  &:hover {
+    cursor: pointer;
+    box-shadow: darken($bg-blue, 15%) 0px 20px 20px 0px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Footer */
+.address,
+.list-menu-footer {
+  font-family: $calibreLight;
+  font-size: 0.9375em;
+  color: $black;
+  line-height: 1.266;
+  opacity: 0.7;
+}
+
+.list-menu-footer {
+  ul {
+    padding: 0;
+    list-style: none;
+    width: 165px;
+    max-width: 100%;
+    margin-right: 1.75em;
+    margin-bottom: 0;
+    &:last-of-type {
+      margin-right: 0;
+      width: auto;
+    }
+  }
+  a {
+    color: $black;
+    opacity: 0.5;
+  }
+}
+
+.outro {
+  font-family: $calibreLight;
+  font-size: 0.9375em;
+  line-height: 1.266;
+  color: $black;
+  max-width: 100%;
+  width: 877px;
+  opacity: 0.3;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  li {
+    margin: 0 0.9375em;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    a {
+      color: $black;
+      opacity: 0.15;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      &.icon {
+        &:hover {
+          opacity: 1;
+          color: $engie;
+        }
+      }
+    }
+  }
+}
+
+/* Custom Select */
+
+$background: #e74c3c;
+$select-background: $white;
+$select-width: calc((100% - 40px) / 3);
+$select-height: 40px;
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: $select-color;
+  width: $select-width;
+  height: $select-height;
+  border: 1px solid #979797;
+  border-radius: 3px;
+}
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $select-background;
+  padding: 8px 15px;
+  transition: all 0.2s ease-in;
+  font-family: $openSans;
+  font-weight: 600;
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: $select-color transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+  &:hover {
+    background-color: darken($select-background, 2);
+  }
+  &:active,
+  &.active {
+    background-color: darken($select-background, 5);
+    &:after {
+      top: 9px;
+      border-color: transparent transparent $select-color transparent;
+    }
+  }
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: darken($select-background, 5);
+  li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid darken($select-background, 10);
+    transition: all 0.2s ease-in;
+    &:hover {
+      color: $select-background;
+      background: $engie;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
