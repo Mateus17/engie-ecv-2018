@@ -199,6 +199,7 @@ h2 {
   border-radius: 100px;
   transition: all 0.2s ease;
   box-shadow: transparent;
+  visibility: hidden;
   &.button-versus-reverse {
     background-color: $white;
     color: $engie;
@@ -256,6 +257,12 @@ h2 {
 }
 
 /* Footer */
+
+footer {
+  padding-top: 3.625em;
+  padding-bottom: 3.625em;
+}
+
 .address,
 .list-menu-footer {
   font-family: $calibreLight;

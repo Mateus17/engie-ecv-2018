@@ -156,7 +156,8 @@ h2 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   -webkit-box-shadow: transparent;
-          box-shadow: transparent; }
+          box-shadow: transparent;
+  visibility: hidden; }
   .button-versus.button-versus-reverse {
     background-color: #ffffff;
     color: #00aaff; }
@@ -205,6 +206,10 @@ h2 {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
 
 /* Footer */
+footer {
+  padding-top: 3.625em;
+  padding-bottom: 3.625em; }
+
 .address,
 .list-menu-footer {
   font-family: "Calibre Light", sans-serif;

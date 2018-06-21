@@ -78,3 +78,12 @@ $("select").each(function() {
     $list.hide();
   });
 });
+
+window.sr = ScrollReveal({ reset: true });
+sr.reveal(".offer", { distance: "50px" }, 100);
+sr.reveal(".vs", { distance: "50px" }, 100);
+sr.reveal(".select", { distance: "20px" }, 50);
+sr.reveal(".versus");
+sr.reveal(".main-header .intro", {}, 100);
+sr.reveal(".main-header h1", {}, 100);
+sr.reveal(".button-versus");
