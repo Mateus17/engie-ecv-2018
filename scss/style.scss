@@ -1,10 +1,15 @@
 @font-face {
   font-family: "Calibre Light";
-  src: url("Calibre-Light.woff2") format("woff2"),
-    url("Calibre-Light.woff") format("woff");
+  src: url("../fonts/Calibre-Light.woff2") format("woff2"),
+    url("../fonts/Calibre-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
+
+$facebook: #3b5998;
+$twitter: #1da1f2;
+$instagram: #f77737;
+$youtube: #ff0000;
 
 $black: #000000;
 $white: #ffffff;
@@ -19,8 +24,13 @@ $firaSans: "Fira Sans", sans-serif;
 $calibreLight: "Calibre Light", sans-serif;
 $ovo: "Ovo", serif;
 
+img {
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.04),
+    0 20px 30px 0 rgba(120, 130, 146, 0.5);
+}
+
 .main-header {
-  background: $black;
+  background: $black url("../images/banner.jpg") no-repeat center center / cover;
   height: 587px;
   position: relative;
 }
@@ -31,6 +41,11 @@ $ovo: "Ovo", serif;
 
 .heading {
   height: calc(587px - 56px);
+}
+
+.navbar {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .video-header {
@@ -138,6 +153,8 @@ h2 {
   position: relative;
   margin: 3.84em auto;
   max-width: 940px;
+  cursor: pointer;
+  position: relative;
   &::before,
   &::after {
     content: "";
@@ -154,9 +171,16 @@ h2 {
   &::after {
     right: 0;
   }
+  .before-text {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .button-versus {
+  cursor: pointer;
   font-family: $openSans;
   font-weight: 700;
   font-size: 1em;
@@ -167,9 +191,23 @@ h2 {
   margin: 1.875em auto 0;
   padding: 0.46em 4em;
   border-radius: 100px;
+  transition: all 0.2s ease;
+  box-shadow: transparent;
   &.button-versus-reverse {
     background-color: $white;
     color: $engie;
+    &:hover {
+      background-color: $engie;
+      color: $white;
+      box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.04),
+        0 20px 30px 0 rgba(120, 130, 146, 0.5);
+    }
+  }
+  &:hover {
+    background-color: $white;
+    color: $engie;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.04),
+      0 20px 30px 0 rgba(120, 130, 146, 0.5);
   }
 }
 
@@ -186,6 +224,13 @@ h2 {
 .offer {
   width: 287px;
   transition: all 0.5s ease;
+  padding: 1em;
+  svg {
+    height: 90px;
+    & + h2 {
+      margin-top: 1.24em;
+    }
+  }
   h2 {
     font-family: $ovo;
     color: $white;
@@ -199,7 +244,6 @@ h2 {
     line-height: 1.35;
   }
   &:hover {
-    cursor: pointer;
     box-shadow: darken($bg-blue, 15%) 0px 20px 20px 0px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
@@ -248,22 +292,40 @@ h2 {
   list-style: none;
   padding: 0;
   li {
-    margin: 0 0.9375em;
+    margin: 0 0.4375em;
     &:first-of-type {
       margin-left: 0;
+      a.icon svg:hover {
+        fill: $facebook;
+      }
+    }
+    &:nth-of-type(2) {
+      a.icon svg:hover {
+        fill: $twitter;
+      }
+    }
+    &:nth-of-type(3) {
+      a.icon svg:hover {
+        fill: $instagram;
+      }
     }
     &:last-of-type {
       margin-right: 0;
+      a.icon svg:hover {
+        fill: $youtube;
+      }
     }
     a {
-      color: $black;
-      opacity: 0.15;
-      transition: all 0.2s ease;
       text-decoration: none;
       &.icon {
-        &:hover {
-          opacity: 1;
-          color: $engie;
+        svg {
+          transition: all 0.2s ease;
+          opacity: 0.15;
+          fill: $black;
+          &:hover {
+            opacity: 1;
+            fill: $engie;
+          }
         }
       }
     }
@@ -272,7 +334,6 @@ h2 {
 
 /* Custom Select */
 
-$background: #e74c3c;
 $select-background: $white;
 $select-width: calc((100% - 40px) / 3);
 $select-height: 40px;
