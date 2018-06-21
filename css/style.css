@@ -55,10 +55,15 @@ h2 {
   margin-bottom: 1.1em; }
 
 .img-vehicule {
-  margin-bottom: 1.4375em; }
+  margin-bottom: 1.4375em;
+  margin-bottom: 1.4375em;
+  margin-top: 3em; }
 
 .vs {
   width: 380px; }
+  .vs h2 {
+    margin-top: 1.4em;
+    margin-bottom: 1.1em; }
 
 .item {
   position: relative;
