@@ -81,9 +81,32 @@ $("select").each(function() {
 
 window.sr = ScrollReveal({ reset: true });
 sr.reveal(".offer", { distance: "50px" }, 100);
-sr.reveal(".vs", { distance: "50px" }, 100);
+sr.reveal(".vs", { distance: "50px" });
 sr.reveal(".select", { distance: "20px" }, 50);
 sr.reveal(".versus");
 sr.reveal(".main-header .intro", {}, 100);
-sr.reveal(".main-header h1", {}, 100);
+sr.reveal("h1");
 sr.reveal(".button-versus");
+sr.reveal(".versus-see-more");
+
+$(".compare-run").click(function() {
+  $(this).addClass("load-compare");
+  setTimeout(function() {
+    $("main, .details").show();
+    $(".compare-run").removeClass("load-compare");
+    $("html, body").animate(
+      {
+        scrollTop: $("main").offset().top
+      },
+      750
+    );
+  }, 2500);
+});
+
+$(".vehicule-1").click(function() {
+  $(".vs-1").addClass("active");
+});
+
+$(".vehicule-2").click(function() {
+  $(".vs-1").removeClass("active");
+});
