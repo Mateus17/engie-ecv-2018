@@ -51,6 +51,7 @@ $("select").each(function() {
 
   $styledSelect.click(function(e) {
     e.stopPropagation();
+    //$styledSelect.parent(".select").addClass("zindex");
     $("div.select-styled.active")
       .not(this)
       .each(function() {
@@ -58,11 +59,17 @@ $("select").each(function() {
           .removeClass("active")
           .next("ul.select-options")
           .hide();
+        $(this)
+          .parent(".select")
+          .removeClass("zindex");
       });
     $(this)
       .toggleClass("active")
       .next("ul.select-options")
       .toggle();
+    $(this)
+      .parent(".select")
+      .toggleClass("zindex");
   });
 
   $listItems.click(function(e) {
@@ -70,11 +77,16 @@ $("select").each(function() {
     $styledSelect.text($(this).text()).removeClass("active");
     $this.val($(this).attr("rel"));
     $list.hide();
+    $(this)
+      .parent()
+      .parent(".select")
+      .removeClass("zindex");
     //console.log($this.val());
   });
 
   $(document).click(function() {
     $styledSelect.removeClass("active");
+    $styledSelect.parent(".select").removeClass("zindex");
     $list.hide();
   });
 });
