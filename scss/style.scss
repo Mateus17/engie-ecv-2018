@@ -33,6 +33,11 @@ body {
   height: 100%;
 }
 
+footer {
+  padding-top: 3.625em;
+  padding-bottom: 3.625em;
+}
+
 .errorActive {
   color: red;
 }
@@ -297,12 +302,31 @@ h2 {
     top: 50%;
     transform: translate(-50%, -50%) scale(0, 0);
   }
+  .errorText {
+    font-size: 0;
+    transition: all 0.2s ease;
+  }
   &.load-compare {
     .text {
       font-size: 0;
     }
+    .errorText {
+      font-size: 0;
+    }
     .loader {
       transform: translate(-50%, -50%) scale(1, 1);
+    }
+    &:hover {
+      background-color: transparent;
+      color: $white;
+    }
+  }
+  &.load-error {
+    .text {
+      font-size: 0;
+    }
+    .errorText {
+      font-size: initial;
     }
     &:hover {
       background-color: transparent;
@@ -475,6 +499,7 @@ $select-height: 40px;
   } */
 }
 .select-styled {
+  white-space: nowrap;
   border-radius: 3px;
   position: absolute;
   top: 0;
@@ -488,13 +513,14 @@ $select-height: 40px;
   font-weight: 600;
   &:after {
     content: "";
-    width: 0;
-    height: 0;
-    border: 7px solid transparent;
-    border-color: $select-color transparent transparent transparent;
     position: absolute;
-    top: 16px;
+    top: 50%;
     right: 10px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: $white url("../images/arrow.png") center center / cover;
+    transition: all 0.2s ease;
   }
   &:hover {
     background-color: darken($select-background, 2);
@@ -505,8 +531,10 @@ $select-height: 40px;
     border-bottom-right-radius: 0;
     background-color: darken($select-background, 5);
     &:after {
-      top: 9px;
-      border-color: transparent transparent $select-color transparent;
+      // top: 9px;
+      // border-color: transparent transparent $select-color transparent;
+      transform: translateY(-50%) rotate(-180deg);
+      background-color: darken($select-background, 5);
     }
   }
 }
@@ -697,9 +725,6 @@ $select-height: 40px;
   .offer-detail {
     font-size: 0.83125em;
     line-height: 1.35;
-  }
-  footer {
-    display: none;
   }
 }
 

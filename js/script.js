@@ -313,6 +313,7 @@ $(".compare-run").click(function() {
       $("#compare-2").attr("data-brand"),
       $("#compare-2").attr("data-modele")
     );
+
     $(this).addClass("load-compare");
     setTimeout(function() {
       $("main, .details").show();
@@ -334,6 +335,12 @@ $(".compare-run").click(function() {
       modele2: null,
       type2: null
     };
+  } else {
+    $(this).addClass("load-error");
+
+    setTimeout(function() {
+      $(".compare-run").removeClass("load-error");
+    }, 2500);
   }
 });
 
