@@ -1,15 +1,3 @@
-const formCompare1 = document.getElementById("compare-1");
-const marque1 = document.getElementById("marque-1");
-const modele1 = document.getElementById("modele-1");
-const type1 = document.getElementById("type-1");
-
-const formCompare2 = document.getElementById("compare-2");
-const marque2 = document.getElementById("marque-2");
-const modele2 = document.getElementById("modele-2");
-const type2 = document.getElementById("type-2");
-
-console.log(marque2.value);
-
 /*
 Reference: http://jsfiddle.net/BB3JK/47/
 */
@@ -51,7 +39,29 @@ $("select").each(function() {
 
   $styledSelect.click(function(e) {
     e.stopPropagation();
-    //$styledSelect.parent(".select").addClass("zindex");
+    console.log("ok");
+    if (
+      $(this).prev()[0] !== $("#modele-1")[0] &&
+      $(this).prev()[0] !== $("#modele-2")[0]
+    ) {
+      if (
+        $(this)
+          .parent()
+          .prev()
+          .children(".select-hidden")[0].value === "hide"
+      ) {
+        console.log(
+          $(this)
+            .parent()
+            .prev()
+            .children(".select-hidden")[0].value
+        );
+        e.preventDefault();
+        return;
+      }
+    }
+
+    //console.log($(this).prev() === $("#modele-1") ? "ok" : "nok");
     $("div.select-styled.active")
       .not(this)
       .each(function() {
@@ -81,7 +91,6 @@ $("select").each(function() {
       .parent()
       .parent(".select")
       .removeClass("zindex");
-    //console.log($this.val());
   });
 
   $(document).click(function() {

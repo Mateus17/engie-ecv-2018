@@ -60,7 +60,7 @@ img {
   border-radius: 5px;
   height: 587px;
   position: relative;
-  box-shadow: 0 20px 60px 0 rgba(3, 73, 255, 0.54);
+  box-shadow: 0 20px 40px 0 rgba(124, 124, 124, 0.5);
   svg {
     margin-bottom: 1.875em;
   }
@@ -271,7 +271,7 @@ h2 {
   }
   &:hover {
     background-color: $white;
-    color: $bg-blue-dark;
+    color: $engie;
     /*  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.04),
       0 20px 30px 0 rgba(120, 130, 146, 0.5); */
   }
@@ -300,7 +300,7 @@ h2 {
       transform: translate(-50%, -50%) scale(1, 1);
     }
     &:hover {
-      background-color: $bg-blue-dark;
+      background-color: transparent;
       color: $white;
     }
   }
@@ -466,10 +466,17 @@ $select-height: 40px;
   color: $select-color;
   width: $select-width;
   height: $select-height;
-  border: 1px solid #979797;
-  border-radius: 3px;
+  //border: 1px solid #979797;
+  //border-radius: 3px;
+  &:nth-child(2),
+  &:nth-child(3) {
+    opacity: 0.75;
+    //pointer-events: none;
+    cursor: not-allowed;
+  }
 }
 .select-styled {
+  border-radius: 3px;
   position: absolute;
   top: 0;
   right: 0;
@@ -495,6 +502,8 @@ $select-height: 40px;
   }
   &:active,
   &.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     background-color: darken($select-background, 5);
     &:after {
       top: 9px;
@@ -697,6 +706,12 @@ $select-height: 40px;
     line-height: 1.35;
   }
   footer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .vehicule-2 {
     display: none;
   }
 }
