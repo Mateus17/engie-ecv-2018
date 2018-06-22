@@ -17,7 +17,7 @@
     <div class="container">
       <div class="col-sm-9 margin-lr-auto d-flex flex-column justify-content-center heading">
         <p class="intro text-center">
-          <svg width="101px" height="35px" viewBox="0 0 558 189" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg width="151.5px" height="52.5px" viewBox="0 0 558 189" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
               <linearGradient x1="49.9496416%" y1="100.00257%" x2="49.9496416%" y2="0.348036134%" id="linearGradient-1">
                 <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
@@ -34,74 +34,47 @@
           </svg>
           <br>Vous ne savez pas quelle voiture électrique choisir&nbsp;?</p>
 
-        <h1 class="text-center">Avec le premier comparateur d'engie trouver la voiture électrique qui vous correspond le mieux</h1>
+        <h1 class="text-center">Avec le premier comparateur d'engie, trouver la voiture électrique qui vous correspond le mieux</h1>
 
-        <form id="compare-1" class="d-flex justify-content-between" action="" method="POST">
+        <form id="compare-1" class="d-flex justify-content-between" data-brand="" data-modele="" data-type="" action="" method="POST">
           <select name="marque-1" id="marque-1">
             <option value="hide">Marque</option>
             <option value="renault">Renault</option>
             <option value="nissan">Nissan</option>
-            <option value="bmw">BMW</option>
             <option value="tesla">Tesla</option>
-            <option value="volkswagen">Volkswagen</option>
-            <option value="hyundai">Hyundai</option>
-            <option value="kia">Kia</option>
-            <option value="citroen">Citroën</option>
-            <option value="peugeot">Peugeot</option>
-            <option value="smart">Smart</option>
           </select>
           <select name="modele-1" id="modele-1" disabled>
             <option value="hide">Modèle</option>
-            <option value="zoe">Zoé</option>
-            <option value="fluence">Fluence ZE</option>
-            <option value="kangoo">Kangoo électrique</option>
-            <option value="master">Master ZE</option>
-            <option value="twizy">Twizy</option>
-            <option value="twizy_cargo">Twizy Cargo</option>
-            <option value="twingo">Twingo électrique</option>
+            <option data-brand="nissan" value="leaf_nouveau">Leaf (2018)</option>
+            <option data-brand="renault" value="zoe">Zoé</option>
+            <option data-brand="renault" value="master">Master ZE</option>
+            <option data-brand="tesla" value="model_3">Model 3</option>
           </select>
           <select name="type-1" id="type-1" disabled>
             <option value="hide">Version</option>
-            <option value="life">Life</option>
-            <option value="life_cr">Life charge rapide</option>
-            <option value="zen">Zen</option>
-            <option value="zen_cr">Zen charge rapide</option>
-            <option value="intens">Intens</option>
-            <option value="intens_cr">Intens charge rapide</option>
-            <option value="edition_one">« Edition One »</option>
-            <option value="edition_one_cr">« Edition One » charge rapide</option>
+            <option value="all">Toutes versions</option>
           </select>
         </form>
 
         <p class="versus text-center">VS</p>
 
-        <form id="compare-2" class="d-flex justify-content-between" action="" method="POST">
+        <form id="compare-2" class="d-flex justify-content-between" data-brand="" data-modele="" data-type="" action="" method="POST">
           <select name="marque-2" id="marque-2">
             <option value="hide">Marque</option>
             <option value="renault">Renault</option>
             <option value="nissan">Nissan</option>
-            <option value="bmw">BMW</option>
             <option value="tesla">Tesla</option>
-            <option value="volkswagen">Volkswagen</option>
-            <option value="hyundai">Hyundai</option>
-            <option value="kia">Kia</option>
-            <option value="citroen">Citroën</option>
-            <option value="peugeot">Peugeot</option>
-            <option value="smart">Smart</option>
           </select>
           <select name="modele-2" id="modele-2" disabled>
             <option value="hide">Modèle</option>
-            <option value="leaf_nouveau">Leaf (nouveau)</option>
-            <option value="leaf">Leaf</option>
-            <option value="imx">IMx</option>
-            <option value="e_nv200">e-NV200</option>
-            <option value="e_nv200_evalia">e-NV200 Evalia</option>
+            <option data-brand="nissan" value="leaf_nouveau">Leaf (2018)</option>
+            <option data-brand="renault" value="zoe">Zoé</option>
+            <option data-brand="renault" value="master">Master ZE</option>
+            <option data-brand="tesla" value="model_3">Model 3</option>
           </select>
           <select name="type-2" id="type-2" disabled>
             <option value="hide">Version</option>
-            <option value="acenta">Acenta</option>
-            <option value="n_connecta">N-Connecta</option>
-            <option value="tekna">Tekna</option>
+            <option value="all">Toutes versions</option>
           </select>
         </form>
 
@@ -171,76 +144,68 @@
     <section class="container">
       <div class="versus-container d-flex justify-content-between">
         <div class="vs vs-1 active">
-          <img class="img-vehicule" src="./images/zoe.jpg" alt="">
-          <h2>
+          <img id="image1" class="img-vehicule" src="./images/zoe.jpg" alt="">
+          <h2 id="nom1">
             <span class="vehicule-1">Renault Zoé Life</span>
             <span class="vehicule-2">Nissan Leaf</span>
           </h2>
           <div class="descriptions">
-            <div class="item d-flex justify-content-between">
+            <div id="prix1" class="item d-flex justify-content-between">
               <div class="col-left">Prix</div>
               <div class="col-right">À partir de 19 750 €</div>
             </div>
-            <div class="item d-flex justify-content-between">
+            <div id="autonomie1" class="item d-flex justify-content-between">
               <div class="col-left">Autonomie électrique</div>
               <div class="col-right">400 km</div>
             </div>
-            <div class="item d-flex justify-content-between">
+            <div id="capacite1" class="item d-flex justify-content-between">
               <div class="col-left">Capacité batterie</div>
               <div class="col-right">41 kWh</div>
             </div>
-            <div class="item d-flex justify-content-between">
+            <div id="puissance1" class="item d-flex justify-content-between">
               <div class="col-left">Puissance de recharge max.</div>
               <div class="col-right">43 kW</div>
             </div>
-            <div class="item d-flex justify-content-between">
+            <div id="priseType1" class="item d-flex justify-content-between">
               <div class="col-left">Prises</div>
               <div class="col-right">Type 2</div>
             </div>
+            <p class="see-more-link">
+              <a href="#" target="_blank">En savoir plus</a>
+            </p>
           </div>
         </div>
 
         <div class="vs vs-2">
-          <img class="img-vehicule" src="./images/leaf.jpg" alt="">
-          <h2>Nissan Leaf</h2>
+          <img id="image2" class="img-vehicule" src="./images/leaf.jpg" alt="">
+          <h2 id="nom2">Nissan Leaf</h2>
           <div class="descriptions">
-            <div class="item d-flex justify-content-between">
+            <div id="prix2" class="item d-flex justify-content-between">
               <div class="col-left">Prix</div>
               <div class="col-right">À partir de 30 990 €</div>
             </div>
-            <div class="item d-flex justify-content-between">
+            <div id="autonomie2" class="item d-flex justify-content-between">
               <div class="col-left">Autonomie électrique</div>
               <div class="col-right">378 km</div>
             </div>
-            <div class="item d-flex justify-content-between">
+            <div id="capacite2" class="item d-flex justify-content-between">
               <div class="col-left">Capacité batterie</div>
               <div class="col-right">40 kWh</div>
             </div>
-            <div class="item d-flex justify-content-between">
+            <div id="puissance2" class="item d-flex justify-content-between">
               <div class="col-left">Puissance de recharge max.</div>
               <div class="col-right">50 kW</div>
             </div>
-            <div class="item d-flex justify-content-between">
+            <div id="priseType2" class="item d-flex justify-content-between">
               <div class="col-left">Prises</div>
               <div class="col-right">Type 2 CHAdeMO</div>
             </div>
+            <p class="see-more-link">
+              <a href="#" target="_blank">En savoir plus</a>
+            </p>
           </div>
         </div>
       </div>
-
-      <p class="versus-see-more text-center">
-        <span class="before-text">Voir plus</span>
-        <svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="Desktop-HD-Copy-2" transform="translate(-698.000000, -1299.000000)" fill="#9D9B9B">
-              <g id="GroupPlus" transform="translate(251.000000, 1272.000000)">
-                <path d="M468.625,27 C471.609715,27 474.418403,27.5631454 477.051147,28.6894531 C479.683892,29.8157608 481.978709,31.3573714 483.935669,33.3143311 C485.892629,35.2712907 487.434239,37.5661083 488.560547,40.1988525 C489.686855,42.8315968 490.25,45.6402846 490.25,48.625 C490.25,51.6097154 489.686855,54.4184032 488.560547,57.0511475 C487.434239,59.6838917 485.892629,61.9787093 483.935669,63.9356689 C481.978709,65.8926286 479.683892,67.4342392 477.051147,68.5605469 C474.418403,69.6868546 471.609715,70.25 468.625,70.25 C465.640285,70.25 462.831597,69.6868546 460.198853,68.5605469 C457.566108,67.4342392 455.271291,65.8926286 453.314331,63.9356689 C451.357371,61.9787093 449.815761,59.6838917 448.689453,57.0511475 C447.563145,54.4184032 447,51.6097154 447,48.625 C447,45.6402846 447.563145,42.8315968 448.689453,40.1988525 C449.815761,37.5661083 451.357371,35.2712907 453.314331,33.3143311 C455.271291,31.3573714 457.566108,29.8157608 460.198853,28.6894531 C462.831597,27.5631454 465.640285,27 468.625,27 Z M468.625,67.5891113 C471.243665,67.5891113 473.700387,67.0893198 475.995239,66.0897217 C478.290091,65.0901236 480.289257,63.7315353 481.992798,62.013916 C483.696338,60.2962968 485.047887,58.2900912 486.047485,55.9952393 C487.047083,53.7003873 487.546875,51.2436654 487.546875,48.625 C487.546875,46.0063346 487.047083,43.5496127 486.047485,41.2547607 C485.047887,38.9599088 483.696338,36.9607426 481.992798,35.2572021 C480.289257,33.5536617 478.290091,32.2021127 475.995239,31.2025146 C473.700387,30.2029166 471.243665,29.703125 468.625,29.703125 C466.006335,29.703125 463.549613,30.2029166 461.254761,31.2025146 C458.959909,32.2021127 456.960743,33.5536617 455.257202,35.2572021 C453.553662,36.9607426 452.202113,38.9599088 451.202515,41.2547607 C450.202917,43.5496127 449.703125,46.0063346 449.703125,48.625 C449.703125,51.2436654 450.202917,53.7003873 451.202515,55.9952393 C452.202113,58.2900912 453.553662,60.2962968 455.257202,62.013916 C456.960743,63.7315353 458.959909,65.0901236 461.254761,66.0897217 C463.549613,67.0893198 466.006335,67.5891113 468.625,67.5891113 Z M478.085937,47.2734375 C478.451988,47.2734375 478.768757,47.4071845 479.036255,47.6746826 C479.303753,47.9421807 479.4375,48.25895 479.4375,48.625 C479.4375,48.99105 479.303753,49.3078193 479.036255,49.5753174 C478.768757,49.8428155 478.451988,49.9765625 478.085937,49.9765625 L469.976562,49.9765625 L469.976562,58.0859375 C469.976562,58.4519875 469.842815,58.7687568 469.575317,59.0362549 C469.307819,59.303753 468.99105,59.4375 468.625,59.4375 C468.25895,59.4375 467.942181,59.303753 467.674683,59.0362549 C467.407185,58.7687568 467.273438,58.4519875 467.273438,58.0859375 L467.273438,49.9765625 L459.164062,49.9765625 C458.798012,49.9765625 458.481243,49.8428155 458.213745,49.5753174 C457.946247,49.3078193 457.8125,48.99105 457.8125,48.625 C457.8125,48.25895 457.946247,47.9421807 458.213745,47.6746826 C458.481243,47.4071845 458.798012,47.2734375 459.164062,47.2734375 L467.273438,47.2734375 L467.273438,39.1640625 C467.273438,38.7980125 467.407185,38.4812432 467.674683,38.2137451 C467.942181,37.946247 468.25895,37.8125 468.625,37.8125 C468.99105,37.8125 469.307819,37.946247 469.575317,38.2137451 C469.842815,38.4812432 469.976562,38.7980125 469.976562,39.1640625 L469.976562,47.2734375 L478.085937,47.2734375 Z"
-                  id="Plus---simple-line-icons"></path>
-              </g>
-            </g>
-          </g>
-        </svg>
-      </p>
     </section>
   </main>
 
@@ -249,7 +214,7 @@
       <h1 class="col-8 offset-2">Découvrez tous les avantages de passer à l’életrique avec l’offre d’Engie : ele’c car</h1>
 
       <div class="d-flex justify-content-between offers">
-        <div class="offer" data-tilt>
+        <div class="offer">
           <svg width="75px" height="75px" viewBox="0 0 75 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="coin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Desktop-HD-Copy-2" transform="translate(-343.000000, -1592.000000)" fill="#0037f5" fill-rule="nonzero">
@@ -299,7 +264,7 @@
           <h2 class="offer-title">Des économies sinificative</h2>
           <p class="offer-detail">L'offre Elec'Car c'est un prix du kWh réduit de 50% par rapport aux heures pleines de l'offre Elec'Car.</p>
         </div>
-        <div class="offer" data-tilt>
+        <div class="offer">
           <svg width="92px" height="90px" viewBox="0 0 92 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="sprout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Desktop-HD-Copy-2" transform="translate(-690.000000, -1577.000000)" fill="#0037f5" fill-rule="nonzero">
@@ -319,7 +284,7 @@
           <p class="offer-detail">Sachez que choisir une offre d’électricité d’ENGIE, c’est opter pour une électricité d’origine hydraulique, éolienne
             et solaire, certifiée par des Garanties d’Origine.</p>
         </div>
-        <div class="offer" data-tilt>
+        <div class="offer">
           <svg width="57px" height="70px" viewBox="0 0 57 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="unlocked" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Desktop-HD-Copy-2" transform="translate(-1023.000000, -1595.000000)" fill="#0037f5" fill-rule="nonzero">
@@ -343,160 +308,26 @@
     </div>
   </section>
 
-  <footer class="container">
-    <nav class="navbar">
-      <span class="navbar-brand mb-0 h1">
-        <svg width="101px" height="35px" viewBox="0 0 558 189" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs>
-            <linearGradient x1="49.9496416%" y1="100.00257%" x2="49.9496416%" y2="0.348036134%" id="linearGradient-2">
-              <stop stop-color="#BABABA" stop-opacity="0" offset="0%"></stop>
-              <stop stop-color="#BABABA" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <g id="engie-noir-0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="engie-noir" fill-rule="nonzero">
-              <path d="M558,85.6 C485.3,32.5 387.1,0 279,0 C170.9,0 72.7,32.5 0,85.6 L558,85.6 Z" id="Shape" fill="url(#linearGradient-2)"></path>
-              <path d="M238.3,100.8 C233.1,100.8 230.4,105 229.7,110.2 C228.899,115.9 225.899,135.7 225.3,140.7 C224.9,143.7 224.7,146.9 221.8,148.2 C218.9,149.5 215.3,147.5 212.3,144.9 C209.3,142.299 164.4,104.099 164.4,104.099 C161.8,101.799 158.6,100.799 155.501,100.799 C148.701,100.799 142.201,104.999 142.201,115.299 L142.201,179 C142.201,184 145.701,187.1 149.9,187.1 C154.501,187.1 157.501,184 158.201,179.6 C158.201,179.6 163.1,149.201 163.701,145.901 C164.4,142.001 165.001,138.901 168.801,137.701 C172.201,136.6 175.501,138.6 180.301,142.901 C185.101,147.1 225.501,183.6 225.501,183.6 C228.601,186.201 230.801,187.3 235.201,187.3 C239.201,187.3 246.4,185.7 246.4,173.5 L246.4,110 C246.4,104 242.8,100.8 238.3,100.8 Z M527.4,168.6 C492.2,176.201 451.9,168.1 451.9,143.201 C451.9,124.401 469.4,116.701 483.1,115.6 C497.5,114.401 508.8,117.5 514.6,123.5 C518.2,127.301 517.2,132.4 510.1,132.801 C503.5,133.2 491.2,133.6 481,134 C475.199,134.2 472.1,137.301 472.1,141.5 C472.1,144.801 474.6,148.6 481.3,148.6 C490.9,148.6 515.199,148.801 527.3,148.801 C535.3,148.801 539.199,144.401 539.199,135.2 C539.199,120.7 526,98.6 487.5,98.6 C452.6,98.6 427.3,116 427.3,144.401 C427.3,184.701 486.699,197.001 530.1,182.1 C534.2,180.701 538,177.701 536.8,173.1 C535.699,169.1 532.4,167.6 527.4,168.6 Z M118.9,168.6 C83.7,176.2 43.4,168.1 43.4,143.2 C43.4,124.4 60.9,116.7 74.6,115.599 C89,114.4 100.3,117.499 106.1,123.499 C109.701,127.3 108.701,132.399 101.6,132.8 C95,133.2 82.7,133.6 72.5,134 C66.7,134.2 63.6,137.301 63.6,141.5 C63.6,144.801 66.1,148.6 72.8,148.6 C82.4,148.6 106.7,148.801 118.8,148.801 C126.8,148.801 130.7,144.401 130.7,135.2 C130.7,120.7 117.5,98.599 79,98.599 C44.1,98.599 18.8,115.999 18.8,144.4 C18.8,184.7 78.2,197 121.6,182.099 C125.701,180.7 129.5,177.7 128.3,173.099 C127.3,169.1 123.9,167.6 118.9,168.6 Z M391.6,129.9 C392.4,151.9 394.4,170.099 395,176.5 C395.699,184.7 400,187.1 404.3,187.1 C408.4,187.1 412.8,185 413.5,176.6 C414.1,169.6 416.199,147.8 417.199,126.3 C417.3,125.2 416.5,124.7 415.599,124.901 L392.699,128.6 C392.060438,128.699885 391.592235,129.25372 391.6,129.9 Z M404.4,98.7 C393.9,98.7 390.8,106.9 390.9,112 C390.9,112.9 391.001,115.5 391.2,118.801 C391.2,119.5 391.9,120.2 392.801,120.1 L416.7,116.201 C417.501,116.001 417.801,115.501 417.9,114.901 C418,113.801 418,112.6 418,112.1 C418.1,107.2 415,98.7 404.4,98.7 Z M369.3,133.801 C361.3,133.801 336.699,134 321,134 C313.399,134 311.5,138.1 311.5,141.5 C311.5,144.5 313.5,148.301 320.699,148.7 C331.599,149.301 345.399,149.9 351.699,150.2 C360.3,150.599 360.399,155.099 357.5,158.801 C351.699,166.401 337.5,171.401 322.8,171.401 C303.6,171.401 282.4,160.501 282.4,143.1 C282.4,126.801 300.501,108.901 354.3,116.5 C359,117.2 363.699,116.301 364.9,111.9 C366.1,107.2 363.1,104.3 357.001,102.599 C344.801,99.4 333.7,98.599 323.101,98.599 C286.901,98.599 257.801,115.9 257.801,143.8 C257.801,173.599 286.701,188.199 322.801,188.199 C363.101,188.199 382.7,166.3 382.7,147.098 C382.6,137.5 377.6,133.8 369.3,133.801 Z"
-                id="Shape" fill="#BABABA"></path>
-            </g>
-          </g>
-        </svg>
-      </span>
-    </nav>
-    <div class="d-flex justify-content-between">
-      <p class="address">
-        Service Clients
-        <br> TSA 87 494
-        <br> 76934 ROUEN CEDEX 09
-      </p>
-      <div class="list-menu-footer d-flex">
-        <ul>
-          <li>
-            <a href="#">Airflow</a>
-          </li>
-          <li>
-            <a href="#">Bornes disponibles</a>
-          </li>
-          <li>
-            <a href="#">Voitures eléctriques</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">Professionnels</a>
-          </li>
-          <li>
-            <a href="#">Entreprises et Collectivités</a>
-          </li>
-          <li>
-            <a href="#">engie.com</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">Presse</a>
-          </li>
-          <li>
-            <a href="#">Numéros d'urgence</a>
-          </li>
-          <li>
-            <a href="#">Plan du site</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">Lexique A à Z</a>
-          </li>
-          <li>
-            <a href="#">CGV</a>
-          </li>
-          <li>
-            <a href="#">Mentions légales</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="d-flex justify-content-between">
-      <p class="outro">Engie, société anonyme au capital de 2 435 285 011 euros, immatriculée au Registre du Commerce et des Sociétés de Nanterre,
-        sous le numéro 542 107 651 dont le siège est situé 1, place Samuel de Champlain 92400 Courbevoie - France</p>
-
-      <ul class="d-flex social-links">
-        <li>
-          <a href="#" class="icon facebook-icon">
-            <svg version="1.1" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-              <g>
-                <path d="M9,22h5c0.553,0,1-0.448,1-1v-8.012h1c0.553,0,1-0.448,1-1V8c0.553,0,1-0.448,1-1V3c0-0.552-0.447-1-1-1h-4
-             c-1.729,0-4.997,1.044-5,4.994L6.994,7C6.444,7.003,6,7.45,6,8v4c0,0.266,0.106,0.521,0.295,0.709C6.482,12.896,6.736,13,7,13
-             c0.002,0,0.004,0,0.006,0L8,12.994V21C8,21.552,8.447,22,9,22z M8,8.994l1.006-0.006c0.55-0.003,0.994-0.45,0.994-1V7
-             c0-2.823,2.504-2.994,3-3h3v2h-2c-0.553,0-1,0.448-1,1v0.988c0,0.552,0.447,1,1,1h1v2h-1c-0.553,0-1,0.448-1,1V20h-3v-8.012
-             c0-0.266-0.106-0.521-0.295-0.709c-0.189-0.188-0.494-0.295-0.711-0.291L8,10.994V8.994z" />
-              </g>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="icon twitter-icon">
-            <svg version="1.1" id="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-              <g>
-                <path d="M2.455,19.22c1.84,1.198,3.981,1.831,6.192,1.831c7.097,0,11.379-5.682,11.504-11.262l1.735-3.326
-		c0.207-0.396,0.125-0.882-0.199-1.189c-0.325-0.309-0.816-0.362-1.198-0.133c-0.309,0.184-1.015,0.265-1.581,0.33
-		c-0.148,0.018-0.294,0.034-0.435,0.053c-0.842-0.709-1.917-1.107-3.023-1.107c-2.491,0-4.534,1.954-4.68,4.411
-		C8.528,8.438,6.479,7.248,5.026,5.46C4.81,5.193,4.473,5.05,4.129,5.099C3.788,5.14,3.491,5.354,3.345,5.665
-		c-0.066,0.142-1.613,3.498-0.36,6.795c0.629,1.653,1.829,2.978,3.577,3.949c-0.695,0.837-1.549,1.025-2.681,1.025
-		c-0.258,0-0.513-0.017-0.764-0.046c-0.453-0.056-0.899,0.216-1.058,0.653C1.901,18.479,2.065,18.967,2.455,19.22z M4.859,11.764
-		c-0.513-1.338-0.394-2.743-0.171-3.763c1.95,1.762,4.465,2.817,7.118,2.95c0.312,0.016,0.617-0.118,0.818-0.359
-		c0.201-0.242,0.277-0.564,0.204-0.871c-0.045-0.188-0.067-0.395-0.067-0.612c0-1.484,1.206-2.692,2.688-2.692
-		c0.74,0,1.456,0.312,1.965,0.854c0.234,0.252,0.581,0.365,0.922,0.298c0.229-0.045,0.495-0.075,0.773-0.107l-0.843,1.615
-		c-0.074,0.144-0.113,0.302-0.113,0.463c0,3.949-2.949,9.512-9.507,9.512c-0.665,0-1.323-0.069-1.964-0.206
-		c0.818-0.43,1.594-1.163,2.211-2.397c0.123-0.246,0.14-0.532,0.045-0.791s-0.292-0.467-0.546-0.575
-		C6.597,14.311,5.408,13.194,4.859,11.764z" />
-              </g>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="icon instagram-icon">
-            <svg version="1.1" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-              <g>
-                <path d="M15.93,1.922H8.054c-3.381,0-6.132,2.75-6.132,6.131v7.876c0,3.381,2.751,6.132,6.132,6.132h7.876
-		c3.381,0,6.132-2.751,6.132-6.132V8.053C22.062,4.672,19.311,1.922,15.93,1.922z M20.062,15.93c0,2.278-1.854,4.132-4.132,4.132
-		H8.054c-2.278,0-4.132-1.854-4.132-4.132V8.053c0-2.278,1.854-4.131,4.132-4.131h7.876c2.278,0,4.132,1.854,4.132,4.131V15.93z"
-                />
-                <path d="M11.978,6.953c-2.77,0-5.023,2.253-5.023,5.023c0,2.77,2.254,5.023,5.023,5.023s5.023-2.254,5.023-5.023
-		C17.001,9.207,14.747,6.953,11.978,6.953z M11.978,15c-1.667,0-3.023-1.356-3.023-3.023s1.356-3.023,3.023-3.023
-		s3.023,1.356,3.023,3.023S13.645,15,11.978,15z" />
-                <circle cx="17" cy="7" r="1" />
-              </g>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="icon youtube-icon">
-            <svg version="1.1" id="youtube" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-              <g>
-                <path d="M17.779,4.391c-1.309-0.089-3.414-0.141-5.776-0.141c-2.33,0-4.491,0.052-5.782,0.141C2.034,4.676,2.019,8.068,2,12.004
-		c0.019,3.926,0.034,7.318,4.222,7.606c1.295,0.087,3.461,0.14,5.794,0.14c0.001,0,0.001,0,0.001,0c2.359,0,4.459-0.051,5.763-0.14
-		c4.187-0.287,4.202-3.679,4.221-7.615C21.981,8.068,21.966,4.677,17.779,4.391z M17.643,17.614
-		c-1.241,0.085-3.345,0.136-5.626,0.136c0,0,0,0-0.001,0c-2.29,0-4.406-0.051-5.658-0.136c-1.86-0.128-2.335-0.696-2.357-5.61
-		c0.022-4.923,0.497-5.492,2.357-5.619C7.605,6.301,9.716,6.25,12.003,6.25c2.285,0,4.394,0.051,5.64,0.136
-		c1.86,0.127,2.335,0.696,2.357,5.61C19.978,16.919,19.503,17.487,17.643,17.614z" />
-                <polygon points="9.75,15 15.75,11.995 9.75,9 	" />
-              </g>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
+  <footer class="container text-center">
+    <svg width="151.5px" height="52.5px" viewBox="0 0 558 189" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <linearGradient x1="49.9496416%" y1="100.00257%" x2="49.9496416%" y2="0.348036134%" id="linearGradient-2">
+          <stop stop-color="#BABABA" stop-opacity="0" offset="0%"></stop>
+          <stop stop-color="#BABABA" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <g id="engie-noir-0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="engie-noir" fill-rule="nonzero">
+          <path d="M558,85.6 C485.3,32.5 387.1,0 279,0 C170.9,0 72.7,32.5 0,85.6 L558,85.6 Z" id="Shape" fill="url(#linearGradient-2)"></path>
+          <path d="M238.3,100.8 C233.1,100.8 230.4,105 229.7,110.2 C228.899,115.9 225.899,135.7 225.3,140.7 C224.9,143.7 224.7,146.9 221.8,148.2 C218.9,149.5 215.3,147.5 212.3,144.9 C209.3,142.299 164.4,104.099 164.4,104.099 C161.8,101.799 158.6,100.799 155.501,100.799 C148.701,100.799 142.201,104.999 142.201,115.299 L142.201,179 C142.201,184 145.701,187.1 149.9,187.1 C154.501,187.1 157.501,184 158.201,179.6 C158.201,179.6 163.1,149.201 163.701,145.901 C164.4,142.001 165.001,138.901 168.801,137.701 C172.201,136.6 175.501,138.6 180.301,142.901 C185.101,147.1 225.501,183.6 225.501,183.6 C228.601,186.201 230.801,187.3 235.201,187.3 C239.201,187.3 246.4,185.7 246.4,173.5 L246.4,110 C246.4,104 242.8,100.8 238.3,100.8 Z M527.4,168.6 C492.2,176.201 451.9,168.1 451.9,143.201 C451.9,124.401 469.4,116.701 483.1,115.6 C497.5,114.401 508.8,117.5 514.6,123.5 C518.2,127.301 517.2,132.4 510.1,132.801 C503.5,133.2 491.2,133.6 481,134 C475.199,134.2 472.1,137.301 472.1,141.5 C472.1,144.801 474.6,148.6 481.3,148.6 C490.9,148.6 515.199,148.801 527.3,148.801 C535.3,148.801 539.199,144.401 539.199,135.2 C539.199,120.7 526,98.6 487.5,98.6 C452.6,98.6 427.3,116 427.3,144.401 C427.3,184.701 486.699,197.001 530.1,182.1 C534.2,180.701 538,177.701 536.8,173.1 C535.699,169.1 532.4,167.6 527.4,168.6 Z M118.9,168.6 C83.7,176.2 43.4,168.1 43.4,143.2 C43.4,124.4 60.9,116.7 74.6,115.599 C89,114.4 100.3,117.499 106.1,123.499 C109.701,127.3 108.701,132.399 101.6,132.8 C95,133.2 82.7,133.6 72.5,134 C66.7,134.2 63.6,137.301 63.6,141.5 C63.6,144.801 66.1,148.6 72.8,148.6 C82.4,148.6 106.7,148.801 118.8,148.801 C126.8,148.801 130.7,144.401 130.7,135.2 C130.7,120.7 117.5,98.599 79,98.599 C44.1,98.599 18.8,115.999 18.8,144.4 C18.8,184.7 78.2,197 121.6,182.099 C125.701,180.7 129.5,177.7 128.3,173.099 C127.3,169.1 123.9,167.6 118.9,168.6 Z M391.6,129.9 C392.4,151.9 394.4,170.099 395,176.5 C395.699,184.7 400,187.1 404.3,187.1 C408.4,187.1 412.8,185 413.5,176.6 C414.1,169.6 416.199,147.8 417.199,126.3 C417.3,125.2 416.5,124.7 415.599,124.901 L392.699,128.6 C392.060438,128.699885 391.592235,129.25372 391.6,129.9 Z M404.4,98.7 C393.9,98.7 390.8,106.9 390.9,112 C390.9,112.9 391.001,115.5 391.2,118.801 C391.2,119.5 391.9,120.2 392.801,120.1 L416.7,116.201 C417.501,116.001 417.801,115.501 417.9,114.901 C418,113.801 418,112.6 418,112.1 C418.1,107.2 415,98.7 404.4,98.7 Z M369.3,133.801 C361.3,133.801 336.699,134 321,134 C313.399,134 311.5,138.1 311.5,141.5 C311.5,144.5 313.5,148.301 320.699,148.7 C331.599,149.301 345.399,149.9 351.699,150.2 C360.3,150.599 360.399,155.099 357.5,158.801 C351.699,166.401 337.5,171.401 322.8,171.401 C303.6,171.401 282.4,160.501 282.4,143.1 C282.4,126.801 300.501,108.901 354.3,116.5 C359,117.2 363.699,116.301 364.9,111.9 C366.1,107.2 363.1,104.3 357.001,102.599 C344.801,99.4 333.7,98.599 323.101,98.599 C286.901,98.599 257.801,115.9 257.801,143.8 C257.801,173.599 286.701,188.199 322.801,188.199 C363.101,188.199 382.7,166.3 382.7,147.098 C382.6,137.5 377.6,133.8 369.3,133.801 Z"
+            id="Shape" fill="#BABABA"></path>
+        </g>
+      </g>
+    </svg>
   </footer>
 
   <script src="./js/jquery-3.3.1.min.js"></script>
   <script src="./js/scrollreveal.min.js"></script>
-  <script src="./js/tilt.jquery.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

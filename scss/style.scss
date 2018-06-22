@@ -25,14 +25,25 @@ $bg-blue-dark: #0037f5;
 
 $h2-color-grey: #595959;
 
+$blue-see-more-link: #2657d3;
+
 $openSans: "Open Sans", sans-serif;
 $firaSans: "Fira Sans", sans-serif;
 $calibreLight: "Calibre Light", sans-serif;
 $see-more-color: #9d9b9b;
 
+html {
+  height: 100%;
+}
+
 body {
-  margin: 2.8%;
   //overflow-y: hidden;
+  padding: 2.8%;
+  height: 100%;
+}
+
+.errorActive {
+  color: red;
 }
 
 img {
@@ -58,11 +69,14 @@ img {
   background-size: 400% 400%;
   animation: Gradient 15s ease infinite;
   border-radius: 5px;
-  height: 587px;
+  height: 100%;
   position: relative;
   box-shadow: 0 20px 40px 0 rgba(124, 124, 124, 0.5);
   svg {
     margin-bottom: 1.875em;
+  }
+  & > .container {
+    height: 100%;
   }
 }
 
@@ -73,7 +87,7 @@ img {
 }
 
 .heading {
-  height: 587px;
+  height: 100%;
 }
 
 .navbar {
@@ -125,28 +139,12 @@ h2 {
 .vs {
   width: 380px;
   h2 {
+    text-transform: capitalize;
     margin-top: 2em;
     margin-bottom: 1.6em;
     font-size: 1.5625em;
     font-weight: 800;
     color: $black;
-  }
-  .descriptions {
-    position: relative;
-    &::after {
-      content: "";
-      background-image: linear-gradient(
-        0deg,
-        #ffffff 5%,
-        rgba(255, 255, 255, 0.57) 27%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 216px;
-    }
   }
 }
 
@@ -172,6 +170,11 @@ h2 {
     height: 1px;
     width: 100%;
     bottom: 0;
+  }
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -205,6 +208,17 @@ h2 {
 .versus-container {
   max-width: 940px;
   margin: auto;
+}
+
+.see-more-link {
+  margin-top: 1.875em;
+  margin-bottom: 0;
+  a {
+    font-family: $openSans;
+    font-weight: 700;
+    color: $blue-see-more-link;
+    text-decoration: none;
+  }
 }
 
 .versus-see-more {
@@ -447,6 +461,89 @@ footer {
   }
 }
 
+/* Form compare */
+#compare-1,
+#compare-2 {
+  &[data-brand=""] {
+    .select {
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        opacity: 0.75 !important;
+        pointer-events: none !important;
+        // cursor: not-allowed;
+      }
+    }
+  }
+  &[data-brand="nissan"],
+  &[data-brand="renault"],
+  &[data-brand="tesla"] {
+    .select {
+      &:nth-of-type(2) {
+        opacity: 1 !important;
+        pointer-events: initial !important;
+      }
+    }
+  }
+  &[data-modele="leaf_nouveau"],
+  &[data-modele="zoe"],
+  &[data-modele="master"],
+  &[data-modele="model_3"] {
+    .select {
+      &:last-of-type {
+        opacity: 1 !important;
+        pointer-events: initial !important;
+      }
+    }
+  }
+}
+
+#compare-1,
+#compare-2 {
+  &[data-brand="nissan"] {
+    .select {
+      &:nth-of-type(2) {
+        .select-options {
+          li {
+            display: none;
+            &[rel="leaf_nouveau"] {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-brand="renault"] {
+    .select {
+      &:nth-of-type(2) {
+        .select-options {
+          li {
+            display: none;
+            &[rel="zoe"],
+            &[rel="master"] {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-brand="tesla"] {
+    .select {
+      &:nth-of-type(2) {
+        .select-options {
+          li {
+            display: none;
+            &[rel="model_3"] {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Custom Select */
 
 $select-background: $white;
@@ -468,12 +565,12 @@ $select-height: 40px;
   height: $select-height;
   //border: 1px solid #979797;
   //border-radius: 3px;
-  &:nth-child(2),
+  /* &:nth-child(2),
   &:nth-child(3) {
     opacity: 0.75;
     //pointer-events: none;
     cursor: not-allowed;
-  }
+  } */
 }
 .select-styled {
   border-radius: 3px;
@@ -622,12 +719,6 @@ $select-height: 40px;
         .descriptions {
           transform: translateX(-105.6%) !important;
         }
-      }
-    }
-  }
-  .vs-1 {
-    h2 {
-      .title-2 {
       }
     }
   }
