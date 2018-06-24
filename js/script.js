@@ -21,7 +21,7 @@ var data = [
         prix: "45 700",
         autonomie: "120",
         capacite: "33",
-        puissance: "n/a",
+        puissance: "57",
         prises: "Type 2",
         lien:
           "https://www.renault.fr/vehicules/vehicules-electriques/master-ze.html"
@@ -93,29 +93,6 @@ $("select").each(function() {
     e.stopPropagation();
     $(this).removeClass("errorActive");
 
-    //console.log("ok");
-    /* if (
-      $(this).prev()[0] !== $("#modele-1")[0] &&
-      $(this).prev()[0] !== $("#modele-2")[0]
-    ) {
-      if (
-        $(this)
-          .parent()
-          .prev()
-          .children(".select-hidden")[0].value === "hide"
-      ) {
-        console.log(
-          $(this)
-            .parent()
-            .prev()
-            .children(".select-hidden")[0].value
-        );
-        e.preventDefault();
-        return;
-      }
-    } */
-
-    //console.log($(this).prev() === $("#modele-1") ? "ok" : "nok");
     $("div.select-styled.active")
       .not(this)
       .each(function() {
