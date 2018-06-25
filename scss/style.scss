@@ -267,6 +267,7 @@ h2 {
   border-radius: 3.5px;
   box-shadow: transparent;
   visibility: hidden;
+  text-decoration: none;
   //transition: all 0.2s ease !important;
   &.button-versus-reverse {
     background-color: $bg-blue-dark;
@@ -275,6 +276,7 @@ h2 {
       background-color: $white;
       color: $bg-blue-dark;
       box-shadow: 5px 5px 24px 0 rgba(0, 55, 245, 0.39);
+      text-decoration: none;
       /* box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.04),
         0 20px 30px 0 rgba(120, 130, 146, 0.5); */
     }
@@ -363,7 +365,8 @@ h2 {
   svg {
     height: 90px;
     & + h2 {
-      margin-top: 1.24em;
+      margin-top: 0.14em;
+      margin-bottom: 0.5em;
     }
   }
   h2 {
@@ -376,10 +379,6 @@ h2 {
     color: $see-more-color;
     font-size: 0.875em;
     line-height: 1.35;
-  }
-  &:hover {
-    box-shadow: darken($bg-blue, 15%) 0px 20px 20px 0px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 }
 
